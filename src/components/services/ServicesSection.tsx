@@ -120,7 +120,7 @@ export default function ServicesSection() {
                 <div className="mt-6 pt-3 border-t border-white/[0.06]">
                   <p className="text-[11px] text-slate-400 leading-snug">
                     <span className="text-emerald-400 font-medium">Outcome: </span>
-                    {service.businessOutcome}
+                    {service.businessValue || service.businessOutcome}
                   </p>
                 </div>
               </div>

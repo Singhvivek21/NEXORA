@@ -33,16 +33,15 @@ export default function CommandPalette() {
   const router = useRouter();
 
   const commands: CommandItem[] = [
-    { id: "c-start", title: "Start a Project (Inquiry Form)", category: "Action", href: "#contact", icon: PhoneCall, badge: "Priority" },
-    { id: "c-architect", title: "Build Your Product (Interactive Architect)", category: "Sections", href: "#product-architect", icon: Zap, badge: "Signature" },
-    { id: "c-businessos", title: "BusinessOS Capability Demo", category: "Solutions & Demos", href: "/work/business-os", icon: Layers, badge: "Demo" },
-    { id: "c-ai-assistant", title: "AI Business Assistant Demo", category: "Solutions & Demos", href: "/work/ai-business-assistant", icon: Cpu, badge: "Demo" },
-    { id: "c-doc-ai", title: "AI Document Intelligence Demo", category: "Solutions & Demos", href: "/work/ai-document-intelligence", icon: FileText, badge: "Demo" },
-    { id: "c-ecommerce", title: "Headless E-Commerce Demo", category: "Solutions & Demos", href: "/work/ecommerce", icon: ShoppingCart, badge: "Demo" },
-    { id: "c-booking", title: "Appointment & Booking Engine Demo", category: "Solutions & Demos", href: "/work/booking", icon: Calendar, badge: "Demo" },
-    { id: "c-services", title: "Interactive Service Explorer", category: "Services", href: "#service-explorer", icon: Sparkles },
-    { id: "c-automation", title: "Automation Node Builder", category: "Services", href: "#automation", icon: GitBranch },
-    { id: "c-tech", title: "Technology Architecture Stack", category: "Sections", href: "#tech-architecture", icon: Code2 },
+    { id: "c-start", title: "Discuss a Project (Enquiry Form)", category: "Action", href: "#contact", icon: PhoneCall, badge: "Priority" },
+    { id: "c-solutions", title: "Solutions Showcase (3 Interactive Demos)", category: "Solutions & Demos", href: "#solutions", icon: Sparkles, badge: "Interactive" },
+    { id: "c-doc-ai", title: "AI Document Intelligence Demo", category: "Solutions & Demos", href: "#solutions", icon: FileText, badge: "Demo" },
+    { id: "c-workflow", title: "Workflow Automation Demo", category: "Solutions & Demos", href: "#solutions", icon: GitBranch, badge: "Demo" },
+    { id: "c-mlops", title: "MLOps Monitoring Dashboard Demo", category: "Solutions & Demos", href: "#solutions", icon: Layers, badge: "Demo" },
+    { id: "c-architect", title: "Product Architect (Topology Generator)", category: "Sections", href: "#product-architect", icon: Zap, badge: "Configurator" },
+    { id: "c-businessos", title: "BusinessOS Command Center", category: "Solutions & Demos", href: "/work/business-os", icon: Layers, badge: "Showcase" },
+    { id: "c-services", title: "Engineering Capabilities (6 Core Services)", category: "Services", href: "#services", icon: Sparkles },
+    { id: "c-tech", title: "Engineering Architecture Blueprint", category: "Sections", href: "#engineering", icon: Code2 },
     { id: "c-process", title: "6-Step Delivery Process", category: "Sections", href: "#process", icon: Layers },
   ];
 

@@ -5,123 +5,117 @@ export interface ServiceItem {
   description: string;
   icon: string;
   capabilities: string[];
-  businessOutcome: string;
+  problemSolved: string;
+  clientDeliverable: string;
+  businessValue: string;
+  businessOutcome?: string;
   featured?: boolean;
 }
 
 export const servicesData: ServiceItem[] = [
   {
-    id: "software-development",
-    title: "Software Development",
-    tagline: "Custom enterprise software built for scale",
-    description: "Custom business applications, SaaS platforms, internal portals and enterprise software tailored to your specific operational workflows.",
-    icon: "Code2",
-    capabilities: [
-      "Custom SaaS Platforms",
-      "Enterprise Web Applications",
-      "Internal Portals & Backoffices",
-      "Microservices & API Architecture"
-    ],
-    businessOutcome: "Eliminates software bloat and scales operations without per-seat licensing traps.",
-    featured: true
-  },
-  {
-    id: "web-development",
-    title: "Web Development",
-    tagline: "High-performance digital flagships",
-    description: "Corporate websites, high-converting landing experiences, e-commerce stores, and progressive web apps engineered for speed and conversion.",
-    icon: "Globe",
-    capabilities: [
-      "Corporate & Brand Websites",
-      "Conversion-Optimized Funnels",
-      "Headless CMS Architecture",
-      "Internationalization & Localization"
-    ],
-    businessOutcome: "Elevates brand authority and turns casual visitors into qualified inbound leads."
-  },
-  {
-    id: "mobile-development",
-    title: "Mobile Development",
-    tagline: "Native & cross-platform applications",
-    description: "Modern Android, iOS and cross-platform applications built with intuitive UX, offline resilience, and seamless cloud synchronization.",
-    icon: "Smartphone",
-    capabilities: [
-      "iOS & Android Native / React Native",
-      "Offline-first Sync Engines",
-      "Biometrics & Secure Enclaves",
-      "App Store & Play Store Lifecycle"
-    ],
-    businessOutcome: "Engages users on their primary devices with frictionless mobile touchpoints."
-  },
-  {
-    id: "ai-solutions",
-    title: "AI Solutions",
-    tagline: "Intelligent systems embedded in workflows",
-    description: "Domain-specific AI assistants, customer intelligence, document processing pipelines, RAG engines, and tailored machine learning integration.",
+    id: "ai-engineering",
+    title: "AI Engineering & Generative AI",
+    tagline: "Domain-specific AI embedded directly into production workflows",
+    description: "Design and implement production-ready language models, retrieval systems, and autonomous task agents that operate securely on proprietary business knowledge.",
     icon: "Cpu",
     capabilities: [
-      "Custom Enterprise RAG & Knowledge Bases",
-      "Autonomous AI Task Agents",
-      "Document Intelligence & Data Extraction",
-      "Conversational Support Copilots"
+      "LLM-powered enterprise applications",
+      "Retrieval-Augmented Generation (RAG) with vector databases",
+      "Specialized AI assistants and task agents",
+      "Automated document intelligence & extraction",
+      "Custom AI integrations & API middleware"
     ],
-    businessOutcome: "Automates complex knowledge work and unlocks instant institutional answers.",
+    problemSolved: "Businesses struggle with generic chatbots that hallucinate, lack domain context, or leak confidential data outside enterprise security boundaries.",
+    clientDeliverable: "Private, audit-logged AI services with sub-second retrieval, calibrated confidence scoring, and enterprise RBAC access control.",
+    businessValue: "Transforms unstructured institutional archives into instant operational answers while automating high-cognitive knowledge workloads.",
     featured: true
   },
   {
     id: "automation",
-    title: "Automation",
-    tagline: "Frictionless operational workflows",
-    description: "Automated business workflows, cross-platform API integrations, webhook orchestration, notifications, and robotic process automation.",
+    title: "Intelligent Workflow Automation",
+    tagline: "End-to-end business process orchestration with human oversight",
+    description: "Eliminate repetitive manual coordination across fragmented SaaS platforms, legacy backends, and communication channels with deterministic event pipelines.",
     icon: "GitBranch",
     capabilities: [
-      "Cross-SaaS Integrations (CRMs, ERPs, Billing)",
-      "Automated Multi-Step Event Pipelines",
-      "Omnichannel Notifications (WhatsApp, Slack, Email)",
-      "Exception Handling & Audit Logging"
+      "Multi-system workflow automation",
+      "API-based webhook integrations (CRM, ERP, Billing)",
+      "Business process orchestration engines",
+      "Human-in-the-loop review and approval gates",
+      "Real-time notifications & exception alerting"
     ],
-    businessOutcome: "Saves hundreds of manual employee hours each month and eliminates human error."
+    problemSolved: "Operational bottlenecks caused by manual data re-entry, unassigned leads, dropped follow-ups, and disconnected third-party software.",
+    clientDeliverable: "Fault-tolerant orchestration pipelines with automated retry logic, dead-letter queues, and real-time execution telemetry dashboards.",
+    businessValue: "Recovers hundreds of manual employee hours each month, cuts transaction turnaround times by 80%, and eliminates human entry errors.",
+    featured: true
+  },
+  {
+    id: "custom-software",
+    title: "Custom Software & Full-Stack Development",
+    tagline: "Engineered web applications, operations portals & scalable SaaS",
+    description: "Architect and deliver high-performance digital products, internal operations platforms, and customer portals tailored exactly to your business logic.",
+    icon: "Code2",
+    capabilities: [
+      "Modern full-stack web applications",
+      "Business management platforms (ERP/CRM)",
+      "Internal operational tools & admin portals",
+      "Robust backend systems and microservices APIs",
+      "Multi-tenant SaaS products with subscription billing"
+    ],
+    problemSolved: "Off-the-shelf software forces businesses to change their workflows, charges steep per-seat licenses, and cannot scale with complex edge cases.",
+    clientDeliverable: "Clean, test-covered TypeScript/Next.js/Node/Go codebases with zero vendor lock-in, full client source ownership, and automated CI/CD.",
+    businessValue: "Delivers proprietary software assets that fit your business model, accelerate daily operations, and scale smoothly under enterprise load."
   },
   {
     id: "data-analytics",
-    title: "Data & Analytics",
-    tagline: "Real-time visibility into business pulse",
-    description: "Business intelligence systems, executive dashboards, predictive data models, warehouse pipelines, and data-driven decision engines.",
+    title: "Data Engineering & Analytics",
+    tagline: "Unified data pipelines, warehousing & real-time decision telemetry",
+    description: "Transform fragmented data silos into reliable analytics pipelines, automated reporting dashboards, and actionable business intelligence.",
     icon: "BarChart3",
     capabilities: [
-      "Executive KPI Dashboards",
-      "Data Warehousing & ETL Pipelines",
-      "Predictive Analytics & Forecasting",
-      "Cohort & Retention Modeling"
+      "Resilient ETL/ELT data pipelines",
+      "Multi-source data integration & cleansing",
+      "Real-time executive reporting dashboards",
+      "Business intelligence & KPI modeling",
+      "Predictive analytics & cohort forecasting"
     ],
-    businessOutcome: "Replaces guesswork with real-time operational clarity and strategic metrics."
+    problemSolved: "Decision-makers rely on outdated spreadsheets, conflicting department metrics, and unverified reports that hide unit economic risks.",
+    clientDeliverable: "Centralized modern data warehouses, automated sync pipelines, and interactive executive dashboards with sub-50ms query speeds.",
+    businessValue: "Provides leadership with a single source of truth for real-time revenue, operational pulse, and forward-looking business decisions."
+  },
+  {
+    id: "mlops",
+    title: "Machine Learning Operations (MLOps)",
+    tagline: "Reliable model lifecycle management, monitoring & retraining pipelines",
+    description: "Operationalize machine learning models from experimentation to production with automated registry tracking, latency profiling, and data drift detection.",
+    icon: "Layers",
+    capabilities: [
+      "Model registry & semantic versioning",
+      "Experiment tracking & evaluation benchmarking",
+      "Blue/Green & Canary model deployment",
+      "Real-time inference & data drift monitoring",
+      "Automated retraining triggers & validation gates"
+    ],
+    problemSolved: "ML models degrade silently in production as real-world data shifts, lacking version control, monitoring, and reproducible deployment processes.",
+    clientDeliverable: "Production-grade MLOps pipelines with automated Kolmogorov-Smirnov drift alerts, latency budgets, and continuous model governance.",
+    businessValue: "Ensures production AI/ML systems maintain high accuracy, meet strict latency SLAs, and continuously adapt to evolving business conditions.",
+    featured: true
   },
   {
     id: "cloud-devops",
-    title: "Cloud & DevOps",
-    tagline: "Resilient, highly available infrastructure",
-    description: "Cloud architecture, continuous deployment pipelines, containerization, database clustering, multi-region failover, and proactive 24/7 monitoring.",
+    title: "Cloud Infrastructure, DevOps & Reliability",
+    tagline: "Zero-downtime deployment pipelines, containerization & 24/7 resilience",
+    description: "Deploy and manage resilient cloud architecture across AWS, Google Cloud, and Azure with automated CI/CD, security hardening, and proactive telemetry.",
     icon: "Cloud",
     capabilities: [
-      "AWS, Google Cloud & Azure Architecture",
-      "Zero-downtime CI/CD Pipelines",
-      "Kubernetes & Docker Orchestration",
-      "SOC2-Ready Security & Backup Posture"
+      "Automated deployment & infrastructure as code (IaC)",
+      "Containerization with Docker & Kubernetes",
+      "Zero-downtime CI/CD continuous deployment",
+      "Proactive infrastructure monitoring & log auditing",
+      "Cloud system integration, caching & disaster recovery"
     ],
-    businessOutcome: "Guarantees 99.99% uptime, data durability, and effortless horizontal scaling."
-  },
-  {
-    id: "ui-ux-design",
-    title: "UI/UX Design",
-    tagline: "Intuitive product design that converts",
-    description: "Deep user research, wireframing, high-fidelity prototypes, complete design systems, and product interfaces designed for effortless adoption.",
-    icon: "Layout",
-    capabilities: [
-      "User Journey Mapping & Architecture",
-      "Interactive High-Fidelity Prototypes",
-      "Design Systems & Token Libraries",
-      "Usability Audits & Conversion CRO"
-    ],
-    businessOutcome: "Drastically lowers user churn and accelerates product onboarding velocity."
+    problemSolved: "Server crashes, slow page response times, manual deployment blunders, and unexpected cloud infrastructure billing spikes.",
+    clientDeliverable: "SOC2-ready cloud environments, automated GitHub Actions pipelines, multi-region failovers, and 99.99% availability SLAs.",
+    businessValue: "Protects business continuity, reduces hosting overhead, and guarantees that customer-facing systems remain fast and secure 24/7."
   }
 ];

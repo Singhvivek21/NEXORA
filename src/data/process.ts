@@ -11,49 +11,73 @@ export const processSteps: ProcessStep[] = [
   {
     step: "01",
     name: "Discover",
-    tagline: "Deep audit of the core business problem",
-    description: "We don't jump into code blindly. We analyze your workflows, bottleneck friction, customer touchpoints, and business objectives to define the exact problem.",
-    deliverables: ["Technical Feasibility Study", "Problem Definition Canvas", "ROI & Impact Assessment"],
+    tagline: "Understand business objectives, systems & constraints",
+    description: "We analyze your business objectives, existing technology stack, data flows, operational constraints, and success criteria before designing solutions.",
+    deliverables: [
+      "Technical Feasibility & Requirements Document",
+      "System Integration & Dependency Mapping",
+      "Target Metrics & ROI Success Criteria"
+    ],
     duration: "Week 1"
   },
   {
     step: "02",
-    name: "Strategize",
-    tagline: "Architecture blueprint & milestone roadmap",
-    description: "We architect the entire system: tech stack selection, data schemas, API contracts, security models, and sprint milestones tailored to your timeline.",
-    deliverables: ["System Architecture Diagram", "Technical Specification (PRD)", "Phased Delivery Roadmap"],
-    duration: "Week 1 - 2"
+    name: "Design",
+    tagline: "Architecture, integrations, security & user experience",
+    description: "We architect the solution end-to-end: data schemas, API contracts, security perimeters, AI models, and interactive high-fidelity user journeys.",
+    deliverables: [
+      "Full System Architecture Blueprint",
+      "Interactive Figma Prototypes & Design Tokens",
+      "Data Schemas & API Integration Contracts"
+    ],
+    duration: "Week 1 – 2"
   },
   {
     step: "03",
-    name: "Design",
-    tagline: "Clickable prototypes & design systems",
-    description: "We craft intuitive user journeys, interactive wireframes, and high-fidelity interfaces in dark/light modes that reflect your brand authority.",
-    deliverables: ["Interactive Figma Prototypes", "Design Token Library", "User Journey Flowcharts"],
-    duration: "Week 2 - 3"
-  },
-  {
-    step: "04",
     name: "Build",
-    tagline: "Production-grade engineering & tests",
-    description: "Our engineers build clean, test-covered, modular code with continuous integration. You receive weekly demo builds to test real working software early.",
-    deliverables: ["Weekly Staging Deployments", "Automated Test Suites", "Clean, Documented Codebase"],
+    tagline: "Full-stack development, AI capabilities & workflows",
+    description: "Our engineers build clean, modular, test-covered code. We train or fine-tune models, construct deterministic workflows, and integrate backend databases.",
+    deliverables: [
+      "Weekly Staging Builds & Live Demos",
+      "Modular Services with Strict Typing",
+      "AI Pipelines & Vector Retrieval Services"
+    ],
     duration: "Sprint-based"
   },
   {
+    step: "04",
+    name: "Validate",
+    tagline: "Functionality, security, performance & data quality",
+    description: "We run comprehensive end-to-end testing, security penetration reviews, automated regression suites, latency profiling, and data quality checks.",
+    deliverables: [
+      "Automated Test Coverage (Unit & Integration)",
+      "Security & Vulnerability Assessment Report",
+      "Latency, Load & Data Integrity Verification"
+    ],
+    duration: "Sprint Milestone"
+  },
+  {
     step: "05",
-    name: "Launch",
-    tagline: "Zero-downtime deployment & onboarding",
-    description: "We configure production cloud infrastructure, domain routing, SSL certificates, load balancers, and monitoring. Then we execute smooth cutover.",
-    deliverables: ["Production Cloud Environment", "Staff Training & Documentation", "Go-Live Monitoring & Audits"],
-    duration: "Launch Day"
+    name: "Deploy",
+    tagline: "Controlled release & continuous production monitoring",
+    description: "We deploy the system through controlled CI/CD pipelines, configure DNS/SSL routing, set up telemetry alerts, and train your internal operational team.",
+    deliverables: [
+      "Zero-Downtime Production Deployment",
+      "24/7 Infrastructure & Model Monitoring Dashboards",
+      "Operational Playbooks & Staff Documentation"
+    ],
+    duration: "Go-Live Window"
   },
   {
     step: "06",
-    name: "Support",
-    tagline: "Continuous scaling, telemetry & upgrades",
-    description: "Technology doesn't stop at deployment. We monitor latency, uptime, security patches, and iterate based on real user behavioral metrics.",
-    deliverables: ["24/7 Health Monitoring", "SLA-Backed Response Times", "Continuous Feature Iteration"],
-    duration: "Ongoing"
+    name: "Improve",
+    tagline: "Performance monitoring, issue resolution & scaling",
+    description: "Technology needs continuous refinement. We monitor real-world inference latency, detect data drift, address edge cases, and scale the system alongside your growth.",
+    deliverables: [
+      "SLA-Backed Technical Support & Incident Response",
+      "Ongoing Model Monitoring & Drift Detection",
+      "Continuous Optimization & Roadmap Iteration"
+    ],
+    duration: "Continuous"
   }
 ];

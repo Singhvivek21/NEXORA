@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { ArrowRight, Menu, X, Sparkles, ChevronRight, Search, Zap } from "lucide-react";
+import { ArrowRight, Menu, X, ChevronRight, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function Navbar() {
@@ -22,14 +22,12 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { name: "Services", href: "#service-explorer" },
-    { name: "Architect", href: "#product-architect" },
-    { name: "BusinessOS", href: "#businessos" },
-    { name: "AI", href: "#ai-assistant-deep" },
-    { name: "Automation", href: "#automation" },
-    { name: "Industries", href: "#industries" },
-    { name: "Tech Stack", href: "#tech-architecture" },
-    { name: "Work", href: "#work" },
+    { name: "Services", href: "#services" },
+    { name: "Solutions", href: "#solutions" },
+    { name: "Engineering", href: "#engineering" },
+    { name: "Process", href: "#process" },
+    { name: "About", href: "#about" },
+    { name: "Contact", href: "#contact" },
   ];
 
   return (
@@ -38,13 +36,13 @@ export default function Navbar() {
         className={cn(
           "fixed top-0 left-0 right-0 z-40 transition-all duration-300",
           scrolled
-            ? "py-3 bg-[#06080E]/90 backdrop-blur-md border-b border-white/[0.08] shadow-2xl shadow-black/50"
-            : "py-6 bg-transparent"
+            ? "py-3 bg-[#06080E]/92 backdrop-blur-md border-b border-white/[0.08] shadow-2xl shadow-black/50"
+            : "py-5 sm:py-6 bg-transparent"
         )}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            {/* Brand Logo */}
+            {/* Brand Logo & Wordmark */}
             <Link
               href="/"
               className="flex items-center gap-2.5 group focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg p-1"
@@ -57,25 +55,25 @@ export default function Navbar() {
                   NEXORA
                 </span>
                 <span className="text-[10px] uppercase font-mono tracking-widest text-slate-400 leading-tight">
-                  Technology Partner
+                  Technology Solutions
                 </span>
               </div>
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden xl:flex items-center gap-1 bg-[#0A0E1A]/80 px-4 py-1.5 rounded-full border border-white/[0.08] backdrop-blur-md">
+            <nav className="hidden lg:flex items-center gap-1 bg-[#0A0E1A]/85 px-4 py-1.5 rounded-full border border-white/[0.08] backdrop-blur-md">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="px-3 py-1.5 text-xs font-semibold text-slate-300 hover:text-white rounded-full hover:bg-white/[0.06] transition-all"
+                  className="px-3.5 py-1.5 text-xs font-semibold text-slate-300 hover:text-white rounded-full hover:bg-white/[0.06] transition-all"
                 >
                   {link.name}
                 </a>
               ))}
             </nav>
 
-            {/* Right Action: Search Trigger & CTA */}
+            {/* Right Action: Search Trigger & "Discuss a Project" CTA */}
             <div className="hidden sm:flex items-center gap-3">
               <button
                 type="button"
@@ -92,15 +90,15 @@ export default function Navbar() {
 
               <a
                 href="#contact"
-                className="relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 shadow-lg shadow-blue-600/25 hover:shadow-blue-600/40 border border-white/20 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+                className="relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold tracking-wide text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 shadow-lg shadow-blue-600/25 hover:shadow-blue-600/40 border border-white/20 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
               >
-                <span>Start a Project</span>
+                <span>Discuss a Project</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </a>
             </div>
 
             {/* Mobile Menu & Search Toggle */}
-            <div className="flex xl:hidden items-center gap-2">
+            <div className="flex lg:hidden items-center gap-2">
               <button
                 type="button"
                 onClick={openSearch}
@@ -124,7 +122,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-40 xl:hidden bg-[#06080E]/98 backdrop-blur-2xl pt-24 px-6 pb-8 flex flex-col justify-between animate-in fade-in duration-200">
+        <div className="fixed inset-0 z-40 lg:hidden bg-[#06080E]/98 backdrop-blur-2xl pt-24 px-6 pb-8 flex flex-col justify-between animate-in fade-in duration-200">
           <div className="space-y-3">
             <p className="text-xs font-mono uppercase tracking-widest text-slate-500 px-3">
               Navigation
@@ -150,11 +148,11 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-blue-600 to-indigo-600 shadow-xl shadow-blue-600/30"
             >
-              <span>Start a Project</span>
+              <span>Discuss a Project</span>
               <ArrowRight className="w-4 h-4" />
             </a>
-            <p className="text-center text-xs text-slate-500">
-              NEXORA · We build what your business needs next.
+            <p className="text-center text-xs text-slate-500 font-mono">
+              Build. Automate. Scale.
             </p>
           </div>
         </div>

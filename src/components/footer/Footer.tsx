@@ -4,30 +4,27 @@ import { ArrowUpRight, Mail, ShieldCheck } from "lucide-react";
 
 export default function Footer() {
   const serviceLinks = [
-    { name: "Software Development", href: "#services" },
-    { name: "Web Development", href: "#services" },
-    { name: "Mobile Development", href: "#services" },
-    { name: "AI Solutions", href: "#services" },
-    { name: "Automation", href: "#services" },
+    { name: "AI Engineering & GenAI", href: "#services" },
+    { name: "Intelligent Automation", href: "#services" },
+    { name: "Custom Software & APIs", href: "#services" },
     { name: "Data & Analytics", href: "#services" },
-    { name: "Cloud & DevOps", href: "#services" },
-    { name: "UI/UX Design", href: "#services" },
+    { name: "Machine Learning (MLOps)", href: "#services" },
+    { name: "Cloud & DevOps Reliability", href: "#services" },
   ];
 
   const solutionLinks = [
-    { name: "CRM & Sales", href: "#solutions" },
-    { name: "Business Platforms", href: "#solutions" },
-    { name: "E-commerce", href: "#solutions" },
-    { name: "Education Systems", href: "#solutions" },
-    { name: "Healthcare Platforms", href: "#solutions" },
-    { name: "SaaS Products", href: "#solutions" },
+    { name: "AI Document Intelligence", href: "#solutions" },
+    { name: "Workflow Automation Engine", href: "#solutions" },
+    { name: "MLOps Monitoring Dashboard", href: "#solutions" },
+    { name: "BusinessOS Command Center", href: "#solutions" },
+    { name: "Industry Architecture", href: "#industries" },
   ];
 
   const companyLinks = [
     { name: "About Nexora", href: "#about" },
-    { name: "Capability Work", href: "#work" },
-    { name: "Our Process", href: "#process" },
-    { name: "Contact & Inquiries", href: "#contact" },
+    { name: "Engineering Blueprint", href: "#engineering" },
+    { name: "Delivery Process", href: "#process" },
+    { name: "Discuss a Project", href: "#contact" },
   ];
 
   return (
@@ -45,8 +42,12 @@ export default function Footer() {
               </span>
             </Link>
 
-            <p className="text-sm text-slate-400 max-w-sm leading-relaxed">
-              Technology that moves business forward. Full-service digital solutions engineered around how your company actually works.
+            <p className="text-sm text-slate-300 font-medium">
+              Build. Automate. Scale.
+            </p>
+
+            <p className="text-xs sm:text-sm text-slate-400 max-w-sm leading-relaxed">
+              Nexora helps businesses modernize operations, automate workflows, and build scalable digital products through AI engineering, custom software, data, and cloud technology.
             </p>
 
             <div className="pt-2 flex items-center gap-2">
@@ -60,7 +61,7 @@ export default function Footer() {
           {/* Services Column */}
           <div>
             <p className="text-xs font-mono uppercase tracking-widest text-white font-bold mb-4">
-              Services
+              Capabilities
             </p>
             <ul className="space-y-2.5 text-xs text-slate-400">
               {serviceLinks.map((item) => (
@@ -105,7 +106,7 @@ export default function Footer() {
             </ul>
 
             <p className="text-xs font-mono uppercase tracking-widest text-white font-bold mb-3">
-              Connect
+              Direct Inquiries
             </p>
             <div className="flex items-center gap-3">
               <a
@@ -127,7 +128,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/Singhvivek21/NEXORA"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="GitHub"
@@ -142,12 +143,12 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-mono">
           <p>© 2026 Nexora. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <span className="hover:text-slate-400 transition-colors">Privacy Policy</span>
-            <span className="hover:text-slate-400 transition-colors">Terms of Service</span>
-            <span className="hover:text-slate-400 transition-colors">Security Overview</span>
+            <span>SOC2 Ready Design</span>
+            <span>Zero Data Leakage Architecture</span>
+            <span>ACID Verified Pipelines</span>
           </div>
         </div>
       </div>

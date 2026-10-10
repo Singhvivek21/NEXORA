@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import { ArrowRight, Sparkles, Terminal, Zap, ShieldCheck } from "lucide-react";
 import HeroCommandInterface from "./HeroCommandInterface";
@@ -8,12 +8,20 @@ import HeroCommandInterface from "./HeroCommandInterface";
 export default function Hero() {
   const headlineWords = [
     "We",
-    "build",
-    "what",
-    "your",
+    "turn",
     "business",
-    "needs",
-    "next.",
+    "problems",
+    "into",
+    "digital",
+    "solutions.",
+  ];
+
+  const capabilityLine = [
+    "AI Engineering",
+    "Automation",
+    "Custom Software",
+    "Data & MLOps",
+    "Cloud",
   ];
 
   return (
@@ -30,7 +38,7 @@ export default function Hero() {
             <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
             <span className="tracking-widest uppercase font-semibold">NEXORA / TECHNOLOGY PARTNER</span>
             <span className="text-slate-600">•</span>
-            <span className="text-slate-400">ENGINEERED FOR SCALE</span>
+            <span className="text-slate-400">BUILD. AUTOMATE. SCALE.</span>
           </div>
 
           {/* Staggered Editorial Headline */}
@@ -40,10 +48,10 @@ export default function Hero() {
                 key={idx}
                 className="inline-block transition-all duration-700 ease-out animate-in fade-in slide-in-from-bottom-2 fill-mode-both"
                 style={{
-                  animationDelay: `${idx * 80}ms`,
+                  animationDelay: `${idx * 70}ms`,
                 }}
               >
-                {word === "next." ? (
+                {word === "solutions." ? (
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-cyan-400">
                     {word}
                   </span>
@@ -54,36 +62,48 @@ export default function Hero() {
             ))}
           </h1>
 
-          {/* Supporting Line */}
-          <p className="mt-6 text-base sm:text-xl font-medium text-slate-300 tracking-wide max-w-2xl mx-auto leading-relaxed">
-            Software · AI · Automation · Data · Cloud
+          {/* Supporting Copy */}
+          <p className="mt-6 text-base sm:text-xl font-normal text-slate-300 tracking-wide max-w-2xl mx-auto leading-relaxed">
+            AI, automation, and custom software engineered to make businesses more efficient, connected, and scalable.
           </p>
 
-          <p className="mt-2 text-sm sm:text-base text-slate-400 max-w-xl mx-auto">
-            From websites and custom software to AI and cloud infrastructure—we design and build technology around the way your business actually works.
+          <p className="mt-2 text-xs sm:text-sm text-slate-400 max-w-xl mx-auto">
+            Nexora helps businesses modernize operations, automate workflows, and build scalable digital products through AI engineering, custom software, data, and cloud technology.
           </p>
 
-          {/* Primary CTA and Secondary */}
-          <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
+          {/* Primary & Secondary CTAs */}
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="#contact"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-sm sm:text-base font-semibold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 hover:from-blue-500 hover:to-indigo-500 shadow-xl shadow-blue-600/30 hover:shadow-blue-600/50 border border-white/20 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full text-sm sm:text-base font-semibold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 hover:from-blue-500 hover:to-indigo-500 shadow-xl shadow-blue-600/30 hover:shadow-blue-600/50 border border-white/20 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
             >
-              <span>Start a Project</span>
+              <span>Discuss a Project</span>
               <ArrowRight className="w-4 h-4" />
             </a>
 
             <a
-              href="#product-architect"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-sm sm:text-base font-medium text-slate-200 bg-[#0F1424]/90 hover:bg-[#151D33] hover:text-white border border-white/10 hover:border-white/20 backdrop-blur-md transition-all"
+              href="#solutions"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm sm:text-base font-medium text-slate-200 bg-[#0F1424]/90 hover:bg-[#151D33] hover:text-white border border-white/10 hover:border-white/20 backdrop-blur-md transition-all"
             >
               <Zap className="w-4 h-4 text-cyan-400" />
-              <span>Architect Your Product</span>
+              <span>Explore Our Capabilities</span>
             </a>
+          </div>
+
+          {/* Capability Line */}
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs sm:text-sm font-mono text-slate-400">
+            {capabilityLine.map((cap, i) => (
+              <React.Fragment key={cap}>
+                <span className="hover:text-slate-200 transition-colors">{cap}</span>
+                {i < capabilityLine.length - 1 && (
+                  <span className="text-slate-600 font-bold">•</span>
+                )}
+              </React.Fragment>
+            ))}
           </div>
         </div>
 
-        {/* Section 8: Interactive Floating Command Interface */}
+        {/* Technical Visualization: Business Workflow connecting to Software, AI, Data & Automation */}
         <div className="mt-14 sm:mt-16">
           <HeroCommandInterface />
         </div>

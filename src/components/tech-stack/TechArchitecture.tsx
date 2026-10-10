@@ -74,7 +74,7 @@ export default function TechArchitecture() {
   const currentLayer = layers.find((l) => l.id === activeLayerId) || layers[1];
 
   return (
-    <section id="tech-architecture" className="relative py-24 md:py-32 bg-[#06080E] border-t border-white/[0.06]">
+    <section id="engineering" className="relative py-24 md:py-32 bg-[#06080E] border-t border-white/[0.06]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-14 md:mb-16">

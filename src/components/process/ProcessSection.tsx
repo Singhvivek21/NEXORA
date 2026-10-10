@@ -10,43 +10,46 @@ import {
   PenTool, 
   Code, 
   Rocket, 
-  ShieldCheck
+  ShieldCheck,
+  Search,
+  CheckCircle2,
+  RefreshCw
 } from "lucide-react";
 import { processSteps, ProcessStep } from "@/data/process";
 import { cn } from "@/lib/utils";
 
 const stepIcons: Record<string, React.ElementType> = {
-  "01": Compass,
-  "02": Cpu,
-  "03": PenTool,
-  "04": Code,
+  "01": Search,
+  "02": PenTool,
+  "03": Code,
+  "04": CheckCircle2,
   "05": Rocket,
-  "06": ShieldCheck,
+  "06": RefreshCw,
 };
 
 export default function ProcessSection() {
   const [activeStep, setActiveStep] = useState<string>("01");
 
   return (
-    <section id="process" className="relative py-24 md:py-32 bg-[#080B14] border-t border-white/[0.06]">
+    <section id="process" className="relative py-24 md:py-32 bg-[#06080E] border-t border-white/[0.06]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-16 md:mb-20">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-mono font-medium text-blue-400 mb-4">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>HOW WE WORK</span>
+            <span>ENGINEERING APPROACH</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
+          <h2 className="section-headline font-extrabold text-white tracking-tight">
             From first conversation to production.
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-300">
-            A disciplined, milestone-driven engineering methodology that guarantees transparent velocity without surprise delays.
+            A disciplined, six-stage engineering methodology designed to turn complex business requirements into resilient, test-verified software systems.
           </p>
         </div>
 
         {/* 6 Connected Steps Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative">
-          {processSteps.map((step, idx) => {
+          {processSteps.map((step) => {
             const Icon = stepIcons[step.step] || Code;
             const isHovered = activeStep === step.step;
 
@@ -58,7 +61,7 @@ export default function ProcessSection() {
                   "rounded-2xl p-6 sm:p-7 border transition-all duration-300 flex flex-col justify-between group",
                   isHovered
                     ? "bg-[#11172A] border-blue-500/50 shadow-xl shadow-blue-500/10 ring-1 ring-blue-500/30 -translate-y-1"
-                    : "bg-[#0B0F1D]/80 border-white/[0.08] hover:border-white/20"
+                    : "bg-[#0A0E1A]/80 border-white/[0.08] hover:border-white/20"
                 )}
               >
                 <div>
@@ -93,8 +96,8 @@ export default function ProcessSection() {
                     <span className="text-blue-300 font-semibold">{step.duration}</span>
                   </div>
                   {step.deliverables.map((del, i) => (
-                    <div key={i} className="flex items-center gap-2 text-xs text-slate-300">
-                      <CheckCircle className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+                    <div key={i} className="flex items-start gap-2 text-xs text-slate-300">
+                      <CheckCircle className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />
                       <span>{del}</span>
                     </div>
                   ))}
